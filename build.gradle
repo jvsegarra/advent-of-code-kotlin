@@ -1,5 +1,7 @@
 buildscript {
     ext.kotlin_version = '1.0.1'
+    ext.kotlintest_version = '1.1.6'
+    ext.mockito_kotlin_version = '0.4.1'
 
     repositories {
         mavenCentral()
@@ -15,10 +17,13 @@ sourceCompatibility = 1.5
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
+    testCompile "io.kotlintest:kotlintest:$kotlintest_version"
+    testCompile "com.nhaarman:mockito-kotlin:$mockito_kotlin_version"
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
